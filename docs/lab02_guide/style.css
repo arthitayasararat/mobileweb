@@ -331,18 +331,77 @@ header h1 {
 /* --------------------
    RESPONSIVE DESIGN
 --------------------*/
-@media(max-width: 768px) {
+@media(max-width: 480px) {
+
+    /* Header */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    canvas {
+        width: 80px;
+        height: 80px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    /* รูปแบบเนื้อหาแบบซ้าย-ขวา → ซ้อนกัน */
+    .place1, 
+    .place2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .img1 {
         width: 100%;
     }
-    .place1 {
-        flex-direction: column;
-    }
+
     .img2 {
         width: 100%;
-        height: 220px;
+        height: 200px;
     }
+
+    .content {
+        padding: 10px;
+    }
+
+    .content p {
+        font-size: 17px;
+        line-height: 28px;
+        text-indent: 25px;
+    }
+
+    /* Recommended box */
+    .place-recom div {
+        width: 90%;
+    }
+
+    .recommend {
+        height: 160px;
+    }
+
+    /* ฟอร์ม */
     .form-container {
         width: 90%;
+        margin: 20px auto 60px;
+        padding: 20px;
+    }
+
+    .form-container h2 {
+        font-size: 20px;
+    }
+
+    .form-container input,
+    .form-container textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .form-container button {
+        font-size: 16px;
+        padding: 12px;
     }
 }
