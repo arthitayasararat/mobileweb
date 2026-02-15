@@ -10,31 +10,31 @@
 
       <ion-input
   label="ชื่อรายการ"
-  @ionInput="e => title = e.detail.value">
+  @ionInput="e => title = e.detail.value ?? ''">
 </ion-input>
 
 <ion-input
   label="จำนวนเงิน"
   type="number"
-  @ionInput="e => amount = e.detail.value">
+  @ionInput="e => amount = Number(e.detail.value ?? 0)">
 </ion-input>
 
 <ion-select
   label="ประเภท"
-  @ionChange="e => type = e.detail.value">
+  @ionChange="e => type = e.detail.value ?? 'expense'">
   <ion-select-option value="income">รายรับ</ion-select-option>
   <ion-select-option value="expense">รายจ่าย</ion-select-option>
 </ion-select>
 
 <ion-input
   label="หมวดหมู่"
-  @ionInput="e => category = e.detail.value">
+  @ionInput="e => category = e.detail.value ?? ''">
   
 </ion-input>
 
 <ion-textarea
   label="หมายเหตุ"
-  @ionInput="e => note = e.detail.value">
+  @ionInput="e => note = e.detail.value ?? ''">
 </ion-textarea>
 <ion-button expand="block" @click="saveExpense">
   บันทึกข้อมูล
